@@ -25,11 +25,11 @@ namespace spotivie
         public Genre genre;
         private int Duur;
         
-        public Song(string title, List<Artist> artists, int genre,int duur)
+        public Song(string title, List<Artist> artists, int genre)
         {
             Title = title;
             Artists = artists;
-            Duur = duur;
+            this.genre = (Genre)genre;
         }
 
         public override string ToString()
