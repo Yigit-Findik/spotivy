@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace spotivie
 {
+    /*
+     * This class is used to create an artist
+     */
     internal class Artist
     {
         public string Name;
