@@ -23,8 +23,8 @@ namespace spotivie
         public string Title;
         public List<Artist> Artists;
         public Genre genre;
-        private int Duur;
-        
+        private int Duur; //change this to duration maybe for the english people
+
         public Song(string title, List<Artist> artists, int genre)
         {
             Title = title;
