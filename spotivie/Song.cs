@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace spotivie
 {
+    /*
+     * This class is used to create an song
+     */
     public enum Genre
     {
         POP,
@@ -23,18 +26,21 @@ namespace spotivie
         public string Title;
         public List<Artist> Artists;
         public Genre genre;
-        private int Duur; //change this to duration maybe for the english people
+        private int Duration;
 
         public Song(string title, List<Artist> artists, int genre)
         {
             Title = title;
             Artists = artists;
             this.genre = (Genre)genre;
+            Random rnd = new Random();
+            Duration = rnd.Next(1, 10);
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            string splitArtistsList = string.Join(",", Artists);
+            return "Song information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nGenre: " + genre + "\r\nDuration: " + Duration + "\r\n";
         }
     }
 }
