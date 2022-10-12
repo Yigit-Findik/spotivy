@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yigit\\Source\\Repos\\spotivy\\spotivie\\spotivie.csproj": {}
+    "C:\\Users\\yigit\\source\\repos\\spotivie\\spotivie\\spotivie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yigit\\Source\\Repos\\spotivy\\spotivie\\spotivie.csproj": {
+    "C:\\Users\\yigit\\source\\repos\\spotivie\\spotivie\\spotivie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yigit\\Source\\Repos\\spotivy\\spotivie\\spotivie.csproj",
+        "projectUniqueName": "C:\\Users\\yigit\\source\\repos\\spotivie\\spotivie\\spotivie.csproj",
         "projectName": "spotivie",
-        "projectPath": "C:\\Users\\Yigit\\Source\\Repos\\spotivy\\spotivie\\spotivie.csproj",
-        "packagesPath": "C:\\Users\\Yigit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yigit\\Source\\Repos\\spotivy\\spotivie\\obj\\",
+        "projectPath": "C:\\Users\\yigit\\source\\repos\\spotivie\\spotivie\\spotivie.csproj",
+        "packagesPath": "C:\\Users\\yigit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yigit\\source\\repos\\spotivie\\spotivie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Yigit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yigit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
