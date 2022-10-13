@@ -39,7 +39,13 @@ namespace spotivie
 
         public override string ToString()
         {
-            string splitArtistsList = string.Join(",", Artists);
+            List<String> artistNames = new List<string>();
+            foreach (Artist artist in Artists)
+            {
+                artistNames.Add(artist.Name);
+            }
+            
+            string splitArtistsList = string.Join(",", artistNames);
             return "Song information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nGenre: " + genre + "\r\nDuration: " + Duration + "\r\n";
         }
     }
