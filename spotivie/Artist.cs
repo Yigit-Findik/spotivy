@@ -34,7 +34,22 @@ namespace spotivie
 
         public override string ToString()
         {
-            return "Artist information\r\n" + "Name: " + Name + "\r\nAlbums: " + Albums + "\r\nSongs: " + Songs + "\r\n";
+            //foreaching through the list of albums and songs so we can print them out
+            List<String> songNames = new List<string>();
+            foreach (Song song in Songs)
+            {
+                songNames.Add(song.Title);
+            }
+            string splitSongsList = string.Join(", ", songNames);
+
+            List<String> albumNames = new List<string>();
+            foreach (Album album in Albums)
+            {
+                albumNames.Add(album.Title);
+            }
+            string splitAlbumsList = string.Join(", ", albumNames);
+            
+            return "Artist information\r\n" + "Name: " + Name + "\r\nAlbums: " + splitAlbumsList + "\r\nSongs: " + splitSongsList + "\r\n";
         }
     }
 }

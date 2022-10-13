@@ -45,7 +45,7 @@ namespace spotivie
                 artistNames.Add(artist.Name);
             }
             
-            string splitArtistsList = string.Join(",", artistNames);
+            string splitArtistsList = string.Join(", ", artistNames);
             return "Song information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nGenre: " + genre + "\r\nDuration: " + Duration + "\r\n";
         }
     }
