@@ -9,7 +9,7 @@ namespace spotivie
     /*
      * This class is used to create an playlist
      */
-     */
+
     internal class Playlist : SongCollection
     {
         public Person Owner;
