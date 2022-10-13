@@ -27,7 +27,7 @@ namespace spotivie
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Album information\r\n" + "Title: " + Title + "\r\nArtists: " + Artists + "\r\nSongs: " + Songs + "\r\n";
         }
 
     }
