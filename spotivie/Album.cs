@@ -20,14 +20,33 @@ namespace spotivie
             Songs = songs;
         }
         
-        public List<Artist> ShowArtists()
+        public string ShowArtists()
         {
-            return Artists;
+            List<string> artistNames = new List<string>();
+            foreach (Artist artist in Artists)
+            {
+                artistNames.Add(artist.Name);
+            }
+            string splitArtistsList = string.Join(", ", artistNames);
+            return "Artists: " + splitArtistsList;
         }
 
         public override string ToString()
         {
-            return "Album information\r\n" + "Title: " + Title + "\r\nArtists: " + Artists + "\r\nSongs: " + Songs + "\r\n";
+            List<string> artistNames = new List<string>();
+            foreach (Artist artist in Artists)
+            {
+                artistNames.Add(artist.Name);
+            }
+            string splitArtistsList = string.Join(", ", artistNames);
+            
+            List<string> songNames = new List<string>();
+            foreach (Song song in Songs)
+            {
+                songNames.Add(song.Title);
+            }
+            string splitSongsList = string.Join(", ", songNames);
+            return "Album information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nSongs: " + splitSongsList + "\r\n";
         }
 
     }
