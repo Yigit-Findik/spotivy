@@ -34,7 +34,7 @@ namespace spotivie
             Artists = artists;
             this.genre = (Genre)genre;
             Random rnd = new Random();
-            Duration = rnd.Next(1, 10);
+            Duration = rnd.Next(1, 10); //randomized duration in minutes
         }
 
         public override string ToString()
