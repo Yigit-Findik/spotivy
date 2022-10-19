@@ -131,10 +131,8 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
-/.vs/spotivie/FileContentIndex/14a33f37-645e-457f-9d07-a4b6f858a409.vsidx
-/.vs/spotivie/FileContentIndex/8f4bf8a7-54c3-4242-99a0-f2cb014c64c6.vsidx
-/.vs/spotivie/FileContentIndex/c1c27204-f649-417a-b7e2-7fea82f126dd.vsidx
-.vs/spotivie/v17/.suo
+/.vs/spotivie/FileContentIndex/*.vsidx
+.vs/spotivie/v17/*.suo
 *.vsidx
 .vs/spotivie/v17/.futdcache.v2
 .vs/spotivie/DesignTimeBuild/.dtbcache.v2
