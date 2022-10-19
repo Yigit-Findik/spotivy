@@ -13,11 +13,11 @@ namespace spotivie
     {
         private List<Artist> Artists;
         private List<Song> Songs;
-
+        
         public Album(List<Artist> artists, List<Song> songs, string title) : base(title)
         {
-            Artists = artists;
             Songs = songs;
+            Artists = artists;
         }
         
         public string ShowArtists()
