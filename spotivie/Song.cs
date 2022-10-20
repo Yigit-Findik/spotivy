@@ -23,14 +23,17 @@ namespace spotivie
 
     internal class Song : iPlayable
     {
-        public string Title { get; }
+        public string Title { get { return title; } }
+        private string title;
+
+
         public List<Artist> Artists;
         public Genre genre;
         private int Duration;
 
         public Song(string title, List<Artist> artists, int genre)
         {
-            Title = title;
+            this.title = title;
             Artists = artists;
             this.genre = (Genre)genre;
             Random rnd = new Random();
@@ -73,7 +76,7 @@ namespace spotivie
             }
             
             string splitArtistsList = string.Join(", ", artistNames);
-            return "Song information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nGenre: " + genre + "\r\nDuration: " + Duration + "\r\n";
+            return "Song information\r\n" + "Title: " + this.title + "\r\nArtists: " + splitArtistsList + "\r\nGenre: " + genre + "\r\nDuration: " + Duration + "\r\n";
         }
     }
 }

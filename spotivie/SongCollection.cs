@@ -8,12 +8,13 @@ namespace spotivie
 {
     internal class SongCollection : iPlayable
     {
-        public string Title;
+        private string title;
+        public string Title { get { return title; } }
         protected List<iPlayable> Playables = new List<iPlayable>();
 
         public SongCollection(string title)
         {
-            Title = title;
+            this.title = title;
         }
 
         public override string ToString()
@@ -50,9 +51,5 @@ namespace spotivie
         {
             throw new NotImplementedException();
         }
-
-        public string Title()
-        {
-            throw new NotImplementedException();
-        }
+    }
 }

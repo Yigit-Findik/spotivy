@@ -45,7 +45,7 @@ namespace spotivie
             List<string> songNames = new List<string>();
             foreach (iPlayable song in Playables)
             {
-                songNames.Add(song.ToString());
+                songNames.Add(song.Title);
             }
             string splitSongsList = string.Join(", ", songNames);
             return "Album information\r\n" + "Title: " + Title + "\r\nArtists: " + splitArtistsList + "\r\nSongs: " + splitSongsList + "\r\n";
