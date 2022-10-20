@@ -6,32 +6,19 @@ using System.Threading.Tasks;
 
 namespace spotivie
 {
-    /*
-     * TODO: NEEDS TO BE REVIEWED IF CORRECT!!!
-     */
-    internal class iPlayable
+    internal interface iPlayable
     {
-        //unsure if this is the right way to do this
-        public int Length;
-        
-        public void Play()
-        {
-            throw new NotImplementedException();
-        }
+        public void Play();
 
-        public void Pause()
-        {
-            throw new NotImplementedException();
-        }
-        
-        public void Next()
-        {
-            throw new NotImplementedException();
-        }
+        public void Pause();
 
-        public void Stop()
-        {
-            throw new NotImplementedException();
-        }
+        public void Stop();
+
+        public void Next();
+
+        public int length();
+
+        //TODO: zet in de verbeterings model*
+        public string Title { get; }
     }
 }

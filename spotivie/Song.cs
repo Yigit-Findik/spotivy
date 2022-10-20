@@ -21,9 +21,9 @@ namespace spotivie
         OTHER
     }
 
-    internal class Song
+    internal class Song : iPlayable
     {
-        public string Title;
+        public string Title { get; }
         public List<Artist> Artists;
         public Genre genre;
         private int Duration;
@@ -36,6 +36,33 @@ namespace spotivie
             Random rnd = new Random();
             Duration = rnd.Next(1, 10); //randomized duration in minutes
         }
+
+        public int length()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Next()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Pause()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Play()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Stop()
+        {
+            throw new NotImplementedException();
+        }
+        
+        
 
         public override string ToString()
         {

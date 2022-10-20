@@ -14,7 +14,7 @@ namespace spotivie
     {
         public Person Owner;
 
-        public Playlist(string title, Person owner) : base(title)
+        public Playlist(Person owner, string title) : base(title)
         {
             Owner = owner;
         }
@@ -31,7 +31,7 @@ namespace spotivie
 
         public override string ToString()
         {
-            return base.ToString();
+            return "Playlist information\r\n" + "Title: " + Title + "\r\nOwner: " + Owner.Name + "\r\n";
         }
     }
 }
