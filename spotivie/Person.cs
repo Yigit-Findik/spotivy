@@ -33,14 +33,20 @@ namespace spotivie
         }
 
         //inherits playlist??? ask Robert for more info
-        public Playlist SelectPlaylist(int hit)
+        public Playlist SelectPlaylist(int choice)
         {
-            return Playlists[hit];
+            return Playlists[choice];
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            List<string> friendNames = new List<string>();
+            foreach (Person friend in Friends)
+            {
+                friendNames.Add(friend.Name);
+            }
+            string splitFriendsList = string.Join(", ", friendNames);
+            return "User information\r\n" + "Name: " + Name + "\r\nFriends: " + splitFriendsList + "\r\nPlaylists: " + ShowPlaylists() + "\r\n";
         }
 
     }

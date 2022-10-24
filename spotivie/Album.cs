@@ -12,11 +12,13 @@ namespace spotivie
     internal class Album : SongCollection
     {
         private List<Artist> Artists;
-        private List<Song> Songs;
         
         public Album(List<Artist> artists, List<Song> songs, string title) : base(title)
         {
-            Songs = songs;
+            foreach (Song song in songs)
+            {
+                Playables.Add(song);
+            }
             Artists = artists;
         }
         
@@ -41,7 +43,7 @@ namespace spotivie
             string splitArtistsList = string.Join(", ", artistNames);
             
             List<string> songNames = new List<string>();
-            foreach (Song song in Songs)
+            foreach (iPlayable song in Playables)
             {
                 songNames.Add(song.Title);
             }
