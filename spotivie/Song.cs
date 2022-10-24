@@ -47,25 +47,23 @@ namespace spotivie
 
         public void Next()
         {
-            throw new NotImplementedException();
+            Play();
         }
 
         public void Pause()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Song is paused");
         }
 
         public void Play()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Playing song: " + title);
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Stopped song: " + title);
         }
-        
-        
 
         public override string ToString()
         {

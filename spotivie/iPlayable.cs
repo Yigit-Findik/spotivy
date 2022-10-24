@@ -18,7 +18,7 @@ namespace spotivie
 
         public int length();
 
-        //TODO: zet in de verbeterings model*
+        //TODO: zet in de verbeterings model* Dat je een length hebt bij deze interface (dus overal moet je een length hebben)
         public string Title { get; }
     }
 }
