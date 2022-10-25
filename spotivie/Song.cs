@@ -57,12 +57,12 @@ namespace spotivie
 
         public void Play()
         {
-            Console.WriteLine("Playing song: " + title);
+            Console.WriteLine("Playing song: " + this.title);
         }
 
         public void Stop()
         {
-            Console.WriteLine("Stopped song: " + title);
+            Console.WriteLine("Stopped song: " + this.title);
         }
 
         public override string ToString()

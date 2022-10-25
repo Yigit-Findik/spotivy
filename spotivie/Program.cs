@@ -49,7 +49,9 @@
             Console.WriteLine(ny.ToString());
             Console.WriteLine(levensles.ToString());
             Console.WriteLine(levensles.ShowArtists());
-            
+
+            onedance.Next();
+
             Console.WriteLine(yigit.SelectPlaylist(0));
 
         }
