@@ -4,11 +4,13 @@
     {
         static void Main(string[] args)
         {
+            //creating client object
+            //Client client = new Client();
 
             //Songs dummy data
             Song song = new Song("song", new List<Artist>(), 0);
             Song onedance = new Song("One Dance", new List<Artist>(), 0);
-            Song champagnepoetry = new Song("Champagne Poetry", new List<Artist>(), 0);
+            Song champagnepoetry = new Song("Champagne Poetry", new List<Artist>(), 2);
             Song wasErNooit = new Song("Was er nooit", new List<Artist>(), 0);
 
             //Artist dummy data
@@ -24,15 +26,18 @@
 
             //Playlist dummy data
             Playlist ny = new Playlist(null, "NY");
+            Playlist robertsBangers = new Playlist(null, "Robert's Bangers");
 
             //Person dummy data
-            Person robert = new Person("Robert", new List<Person>(), new List<Playlist>());
+            Person testPerson = new Person("Test Person", new List<Person>(), new List<Playlist>());
+            Person robert = new Person("Robert", new List<Person>() { testPerson}, new List<Playlist>() { robertsBangers});
             Person yigit = new Person("Yigit", new List<Person>() { robert }, new List<Playlist>() { ny });
             ny.Owner = yigit;
 
             //add in song object Artists field the name of the artist
             wasErNooit.Artists.Add(lijpe);
             song.Artists.Add(artist);
+            champagnepoetry.Artists.Add(drake);
             //song.Artists.Add(artist.Name);
 
             //adding song to artist
@@ -45,14 +50,29 @@
             artist.AddAlbum(album);
             artist.AddAlbum(album2);
 
-            Console.WriteLine(yigit.ToString());
-            Console.WriteLine(ny.ToString());
-            Console.WriteLine(levensles.ToString());
-            Console.WriteLine(levensles.ShowArtists());
+            //super user?
+            SuperUser superuser = new SuperUser("superuser", new List<Person>(), new List<Playlist>());
+            
+            superuser.AddFriend(yigit);
+            superuser.AddFriend(robert);
+            superuser.AddFriend(testPerson);
+            Console.WriteLine(superuser.ShowFriends());
 
-            onedance.Next();
+            //creating playlists for the playlist list in superuser (user/person what ever you want to call it really..)
+            superuser.CreatePlaylist();
 
-            Console.WriteLine(yigit.SelectPlaylist(0));
+            //try catch
+            try
+            {
+                superuser.SelectPlaylist(0);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            //Console.WriteLine(string.Join(System.Environment.NewLine, robert.ShowFriends()));
+            //Console.WriteLine(yigit.SelectPlaylist(0));
 
         }
     }

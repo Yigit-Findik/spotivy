@@ -57,7 +57,13 @@ namespace spotivie
 
         public void Play()
         {
-            Console.WriteLine("Playing song: " + this.title);
+            List<String> artistNames = new List<string>();
+            foreach (Artist artist in Artists)
+            {
+                artistNames.Add(artist.Name);
+            }
+            string splitArtistsList = string.Join(", ", artistNames);
+            Console.WriteLine("Playing song: " + this.title + " by " + splitArtistsList + " (" + this.genre + ")");
         }
 
         public void Stop()
