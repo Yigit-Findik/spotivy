@@ -13,17 +13,17 @@ namespace spotivie
         public bool Playing;
         public bool Shuffle;
         public bool Repeat;
-        //private SuperUser ActiveUser;
+        private SuperUser ActiveUser;
         private List<Album> AllAlbums;
         private List<Song> AllSongs;
         private List<Person> AllUsers;
 
-        public Client(List<Person> user)
+        public Client(List<Person> user, List<Album> albums, List<Song> songs)
         {
-            //ActiveUser = new SuperUser();
-            AllAlbums = new List<Album>();
-            AllSongs = new List<Song>();
-            AllUsers = new List<Person>();
+            ActiveUser = (SuperUser)user[0];
+            AllUsers = user;
+            AllAlbums = albums;
+            AllSongs = songs;
         }
         
         public void ShowAllAlbums()
