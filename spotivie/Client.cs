@@ -20,10 +20,19 @@ namespace spotivie
 
         public Client(List<Person> user, List<Album> albums, List<Song> songs)
         {
-            ActiveUser = (SuperUser)user[0];
             AllUsers = user;
             AllAlbums = albums;
             AllSongs = songs;
+        }
+
+        public void SetActiveUser(Person user)
+        {
+            ActiveUser = new SuperUser(user);            
+        }
+
+        public void ShowActiveUser()
+        {
+            Console.WriteLine(ActiveUser.Name);
         }
         
         public void ShowAllAlbums()
@@ -108,15 +117,24 @@ namespace spotivie
         }
         public void ShowFriends()
         {
-            //empty for now
+            
         }
         public void SelectFriend()
         {
             //empty for now
         }
-        public void AddFriend(int friendID)
+        public void AddFriend(int friendName)
         {
-            //empty for now
+
+            ActiveUser.AddFriend(AllUsers[friendName]);
+
+            //foreach (Person person in AllUsers)
+            //{
+            //    if (person.Name == friendName)
+            //    {
+            //        ActiveUser.AddFriend(person);
+            //    }
+            //}
         }
         public void RemoveFriend(int friendID)
         {

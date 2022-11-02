@@ -8,6 +8,12 @@ namespace spotivie
 {
     internal class SuperUser : Person
     {
+
+        public SuperUser(Person hi) : base(hi.Name)
+        {
+            
+        }
+
         public SuperUser(string name, List<Person> friends, List<Playlist> playlists) : base(name, friends, playlists)
         {
             Name = name;
@@ -30,7 +36,7 @@ namespace spotivie
         }
         public void DeletePlaylist(int playlist)
         {
-            //empty for now
+            Playlists.RemoveAt(playlist);
         }
         public void AddToPlaylist(Playlist playlist, iPlayable playable)
         {

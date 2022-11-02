@@ -14,7 +14,12 @@ namespace spotivie
         public string Name;
         protected List<Person> Friends; //super user is child of person so it can access this
         protected List<Playlist> Playlists; //protected so super user can use it aswell
-
+        public Person(string name)
+        {
+            Name = name;
+            Friends = new List<Person>();
+            Playlists = new List<Playlist>();
+        }
         public Person(string name, List<Person> friends, List<Playlist> playlists)
         {
             Name = name;
