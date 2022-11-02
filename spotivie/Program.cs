@@ -42,8 +42,9 @@
             albums.Add(certifiedloverboy);
             albums.Add(getrichordietryin);
 
-            //creating client object
             Client client = new Client(users, albums, songs);
+            
+            client.SetActiveUser(yigit);
 
             //add in song object Artists field the name of the artist
             wasErNooit.Artists.Add(lijpe);
@@ -56,9 +57,6 @@
 
             //adding album to artist
             lijpe.AddAlbum(levensles);
-
-            //sets the superuser
-            client.SetActiveUser(yigit);
             
 
             client.AddFriend(0);
