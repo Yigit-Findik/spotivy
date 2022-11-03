@@ -11,7 +11,9 @@ namespace spotivie
 
         public SuperUser(Person hi) : base(hi.Name)
         {
-            
+            //This was made so that the superuser can be made from a person object
+            //for example client ActiveUser was first a person object, but now it is a superuser object because of this constructor
+            //PERSONAL NOTE: put this in your improvement model
         }
 
         public SuperUser(string name, List<Person> friends, List<Playlist> playlists) : base(name, friends, playlists)
