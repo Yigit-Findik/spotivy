@@ -15,11 +15,11 @@ namespace spotivie
         
         public Album(List<Artist> artists, List<Song> songs, string title) : base(title)
         {
-            foreach (Song song in songs)
-            {
-                Playables.Add(song);
-            }
             Artists = artists;
+            foreach (iPlayable query in Playables)
+            {
+                Playables.Add(query);
+            }
         }
         
         public string ShowArtists()

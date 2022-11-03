@@ -31,7 +31,7 @@ namespace spotivie
         {
             foreach (Person person in Friends)
             {
-                Console.WriteLine(person.Name);
+                Console.Write(person.Name + ", ");
             }
             return Friends;
         }

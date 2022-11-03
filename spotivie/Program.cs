@@ -60,8 +60,10 @@
             
             client.ShowAllUsers();
             
-            client.AddFriend(2);
+            Console.WriteLine("");
             
+            client.AddFriend(2);
+            client.AddFriend(1);
             client.ShowFriends();
             
             //yigit.AddFriend(robert);

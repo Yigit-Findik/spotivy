@@ -11,8 +11,8 @@ namespace spotivie
         public iPlayable CurrentlyPlaying;
         public int CurrentTime;
         public bool Playing;
-        public bool Shuffle;
-        public bool Repeat;
+        public bool Shuffle = false; //default is false (not shuffled)
+        public bool Repeat = false; //default is false (not repeated)
         private SuperUser ActiveUser;
         private List<Album> AllAlbums;
         private List<Song> AllSongs;
@@ -60,7 +60,7 @@ namespace spotivie
         }
         public void Play()
         {
-            //empty for now
+            CurrentlyPlaying.Play();
         }
         public void Pause()
         {
@@ -76,15 +76,15 @@ namespace spotivie
         }
         public void SetShuffle(bool shuffle)
         {
-            //empty for now
+            shuffle = true;
         }
         public void SetRepeat(bool repeat)
         {
-            //empty for now
+            repeat = true;
         }
         public void CreatePlaylist(string title)
         {
-            //empty for now
+            Playlist test = new Playlist(ActiveUser, title);
         }
         public void ShowPlaylists()
         {
@@ -113,26 +113,19 @@ namespace spotivie
         public void ShowFriends()
         {
             this.ActiveUser.ShowFriends();
+            Console.WriteLine("\n");
         }
         public void SelectFriend()
         {
-            
+            Console.WriteLine("select a friend");
         }
         public void AddFriend(int friendName)
         {
-
             ActiveUser.AddFriend(AllUsers[friendName]);
-            //foreach (Person person in AllUsers)
-            //{
-            //    if (person.Name == friendName)
-            //    {
-            //        ActiveUser.AddFriend(person);
-            //    }
-            //}
         }
         public void RemoveFriend(int friendID)
         {
-            //ActiveUser.RemoveFriend(ActiveUser.Friends[friendID]);
+            ActiveUser.RemoveFriend(AllUsers[friendID]);
         }
 
         //public methods to debug my code
