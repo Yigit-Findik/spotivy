@@ -14,7 +14,12 @@ namespace spotivie
         public string Name;
         protected List<Person> Friends; //super user is child of person so it can access this
         protected List<Playlist> Playlists; //protected so super user can use it aswell
-
+        public Person(string name)
+        {
+            Name = name;
+            Friends = new List<Person>();
+            Playlists = new List<Playlist>();
+        }
         public Person(string name, List<Person> friends, List<Playlist> playlists)
         {
             Name = name;
@@ -22,19 +27,22 @@ namespace spotivie
             Playlists = playlists;
         }
 
-        public string ShowFriends()
+        public List<Person> ShowFriends()
         {
-            List<string> friendsList = new List<string>();
             foreach (Person person in Friends)
             {
-                friendsList.Add(person.Name);
+                Console.Write(person.Name + ", ");
             }
-            string splitFriendsList = string.Join(", ", friendsList);
-            return "Friends: " + splitFriendsList;
+            return Friends;
         }
 
         public List<Playlist> ShowPlaylists()
         {
+            //not finished
+            foreach (Playlist playlist in Playlists)
+            {
+                Console.WriteLine(playlist.Title);
+            }
             return Playlists;
         }
 

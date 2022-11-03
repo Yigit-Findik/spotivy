@@ -11,8 +11,8 @@ namespace spotivie
         public iPlayable CurrentlyPlaying;
         public int CurrentTime;
         public bool Playing;
-        public bool Shuffle;
-        public bool Repeat;
+        public bool Shuffle = false; //default is false (not shuffled)
+        public bool Repeat = false; //default is false (not repeated)
         private SuperUser ActiveUser;
         private List<Album> AllAlbums;
         private List<Song> AllSongs;
@@ -20,10 +20,14 @@ namespace spotivie
 
         public Client(List<Person> user, List<Album> albums, List<Song> songs)
         {
-            ActiveUser = (SuperUser)user[0];
             AllUsers = user;
             AllAlbums = albums;
             AllSongs = songs;
+        }
+
+        public void SetActiveUser(Person user)
+        {
+            ActiveUser = new SuperUser(user);
         }
         
         public void ShowAllAlbums()
@@ -56,7 +60,7 @@ namespace spotivie
         }
         public void Play()
         {
-            //empty for now
+            CurrentlyPlaying.Play();
         }
         public void Pause()
         {
@@ -72,15 +76,15 @@ namespace spotivie
         }
         public void SetShuffle(bool shuffle)
         {
-            //empty for now
+            shuffle = true;
         }
         public void SetRepeat(bool repeat)
         {
-            //empty for now
+            repeat = true;
         }
         public void CreatePlaylist(string title)
         {
-            //empty for now
+            Playlist test = new Playlist(ActiveUser, title);
         }
         public void ShowPlaylists()
         {
@@ -108,19 +112,34 @@ namespace spotivie
         }
         public void ShowFriends()
         {
-            //empty for now
+            this.ActiveUser.ShowFriends();
+            Console.WriteLine("\n");
         }
         public void SelectFriend()
         {
-            //empty for now
+            Console.WriteLine("select a friend");
         }
-        public void AddFriend(int friendID)
+        public void AddFriend(int friendName)
         {
-            //empty for now
+            ActiveUser.AddFriend(AllUsers[friendName]);
         }
         public void RemoveFriend(int friendID)
         {
-            //empty for now
+            ActiveUser.RemoveFriend(AllUsers[friendID]);
+        }
+
+        //public methods to debug my code
+        public void ShowAllUsers()
+        {
+            foreach (Person person in AllUsers)
+            {
+                Console.WriteLine(person.Name);
+            }
+        }
+
+        public void ShowActiveUser()
+        {
+            Console.WriteLine(ActiveUser.Name);
         }
 
 
