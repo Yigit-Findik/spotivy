@@ -27,12 +27,7 @@ namespace spotivie
 
         public void SetActiveUser(Person user)
         {
-            ActiveUser = new SuperUser(user);            
-        }
-
-        public void ShowActiveUser()
-        {
-            Console.WriteLine(ActiveUser.Name);
+            ActiveUser = new SuperUser(user);
         }
         
         public void ShowAllAlbums()
@@ -117,17 +112,16 @@ namespace spotivie
         }
         public void ShowFriends()
         {
-            
+            this.ActiveUser.ShowFriends();
         }
         public void SelectFriend()
         {
-            //empty for now
+            
         }
         public void AddFriend(int friendName)
         {
 
             ActiveUser.AddFriend(AllUsers[friendName]);
-
             //foreach (Person person in AllUsers)
             //{
             //    if (person.Name == friendName)
@@ -138,7 +132,21 @@ namespace spotivie
         }
         public void RemoveFriend(int friendID)
         {
-            //empty for now
+            //ActiveUser.RemoveFriend(ActiveUser.Friends[friendID]);
+        }
+
+        //public methods to debug my code
+        public void ShowAllUsers()
+        {
+            foreach (Person person in AllUsers)
+            {
+                Console.WriteLine(person.Name);
+            }
+        }
+
+        public void ShowActiveUser()
+        {
+            Console.WriteLine(ActiveUser.Name);
         }
 
 

@@ -27,19 +27,22 @@ namespace spotivie
             Playlists = playlists;
         }
 
-        public string ShowFriends()
+        public List<Person> ShowFriends()
         {
-            List<string> friendsList = new List<string>();
             foreach (Person person in Friends)
             {
-                friendsList.Add(person.Name);
+                Console.WriteLine(person.Name);
             }
-            string splitFriendsList = string.Join(", ", friendsList);
-            return "Friends: " + splitFriendsList;
+            return Friends;
         }
 
         public List<Playlist> ShowPlaylists()
         {
+            //not finished
+            foreach (Playlist playlist in Playlists)
+            {
+                Console.WriteLine(playlist.Title);
+            }
             return Playlists;
         }
 

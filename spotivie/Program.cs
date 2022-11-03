@@ -27,7 +27,7 @@
             Song champagnepoetry = new Song("Champagne Poetry", new List<Artist>(), 2);
             Song wasErNooit = new Song("Was er nooit", new List<Artist>(), 2);
             Song onedance = new Song("One Dance", new List<Artist>(), 0);
-            Song manymen = new Song("Many Men (Wish Death)", new List<Artist>(), 2);
+            Song manymen = new Song("Many Men (Wish Death)", new List<Artist>() { fiftycent }, 2);
 
             songs.Add(champagnepoetry);
             songs.Add(wasErNooit);
@@ -58,18 +58,16 @@
             //adding album to artist
             lijpe.AddAlbum(levensles);
             
-
-            client.AddFriend(0);
-
-            Console.WriteLine(yigit.ShowFriends());
-            //yigit.AddFriend(testPerson);
+            client.ShowAllUsers();
+            
+            client.AddFriend(2);
+            
+            client.ShowFriends();
+            
             //yigit.AddFriend(robert);
             //superuser.AddFriend(yigit);
             //superuser.AddFriend(robert);
-            //superuser.AddFriend(testPerson);
             //Console.WriteLine(superuser.ShowFriends());
-
-            //superuser.CreatePlaylist(Playlist hi
 
             //creating playlists for the playlist list in superuser (user/person what ever you want to call it really..)
             //superuser.CreatePlaylist();
